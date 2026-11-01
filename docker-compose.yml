@@ -1,0 +1,9 @@
+# Base PostgreSQL locale pour tester :  docker compose up -d
+services:
+  db:
+    image: postgres:16
+    environment: { POSTGRES_USER: bushido, POSTGRES_PASSWORD: bushido, POSTGRES_DB: bushido }
+    ports: ["5432:5432"]
+    volumes: [dbdata:/var/lib/postgresql/data]
+volumes:
+  dbdata:
